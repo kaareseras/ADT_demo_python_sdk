@@ -1,0 +1,66 @@
+{
+    "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:Room;1",
+    "@type": "Interface",
+    "displayName": "Room - Interface Model",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+    {
+      "@type": "Property",
+      "name": "RoomName",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": [ "Property", "Temperature" ],
+      "name": "Temperature",
+      "schema": "double",
+      "unit": "degreeCelsius",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "Humidity",
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Ocupied",
+      "schema": "boolean"
+    },
+    {
+      "@type": ["Property", "Area"],
+      "name": "RoomArea",
+      "schema": "integer",
+      "writable": true,
+      "unit": "squareMetre"
+    },
+    {
+        "@type": "Relationship",
+        "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:Room:rel_has_access_to;1",
+        "name": "rel_has_access_to",
+        "displayName": "Has Access To",
+        "target": "dtmi:com:microsoft:iot:e2e:SmartHouse:Room;1"
+    },
+    {
+        "@type": "Relationship",
+        "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:Room:rel_has_IoTHub_Enviromental_Sensor;1",
+        "name": "rel_has_IoTHub_Enviromental_Sensor",
+        "displayName": "Has IoTHub enviromental sensor",
+        "target": "dtmi:com:microsoft:iot:e2e:SmartHouse:IoTHub_Enviromental_Sensor;1"
+    },
+    {
+        "@type": "Relationship",
+        "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:Room:rel_has_HA_Sensor_Unit;1",
+        "name": "rel_has_HA_Sensor_Unit",
+        "displayName": "Has HA sensor",
+        "target": "dtmi:com:microsoft:iot:e2e:SmartHouse:HA_Sensor_Unit;1"
+    },
+    {
+        "@type": "Relationship",
+        "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:Room:rel_has_HA_Temp_Sensor;1",
+        "name": "rel_has_HA_Temp_Sensor",
+        "displayName": "Has HA temp sensor",
+        "target": "dtmi:com:microsoft:iot:e2e:SmartHouse:HA_Temp_Sensor;1"
+    }
+  ]
+}

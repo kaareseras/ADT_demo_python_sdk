@@ -1,0 +1,48 @@
+{
+    "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:Site;1",
+    "@type": "Interface",
+    "displayName": "Site - Interface Model",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "SiteName",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "GeoLocation",
+            "schema": {
+                "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:custom_schema:GeoCord;1",
+                "@type": "Object",
+                "fields": [
+                    {
+                    "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:custom_schema:GeoCord:lat;1",
+                    "name": "Latitude",
+                    "schema": "double"
+                    },
+                    {
+                    "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:custom_schema:GeoCord:lon;1",
+                    "name": "Longitude",
+                    "schema": "double"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:site:rel_has_building;1",
+            "name": "rel_has_building",
+            "displayName": "Has building",
+            "target": "dtmi:com:microsoft:iot:e2e:SmartHouse:Building;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:site:rel_has_area;1",
+            "name": "rel_has_area",
+            "displayName": "Has area",
+            "target": "dtmi:com:microsoft:iot:e2e:SmartHouse:Area;1"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:Power_Sensor;1",
+    "@type": "Interface",
+    "displayName": "Power_Sensor - Interface Model",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+    {
+      "@type": [ "Property", "Power" ],
+      "name": "Power",
+      "schema": "double",
+      "unit": "watt",
+      "writable": true
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+    "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:HA_Temp_Sensor;1",
+    "@type": "Interface",
+    "displayName": "HA_Temp_Sensor- Interface Model",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+    {
+      "@type": "Property",
+      "name": "Manufacturer",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "Active",
+      "schema": "boolean",
+      "writable": true
+    },
+    {
+      "@type": [ "Property", "Temperature" ],
+      "name": "Temperature",
+      "schema": "double",
+      "unit": "degreeCelsius",
+      "writable": true
+    }
+  ]
+}

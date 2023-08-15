@@ -1,0 +1,41 @@
+{
+    "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:HA_Sensor_Unit;1",
+    "@type": "Interface",
+    "displayName": "HA_Sensor_Unit - Interface Model",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+    {
+      "@type": "Property",
+      "name": "Manufacturer",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "Active",
+      "schema": "boolean",
+      "writable": true
+    },
+    {
+        "@type": "Relationship",
+        "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:HA_Sensor_Unit:rel_has_Power_Sensor;1",
+        "name": "rel_has_Power_Sensor",
+        "displayName": "Has Power Sensor",
+        "target": "dtmi:com:microsoft:iot:e2e:SmartHouse:Power_Sensor;1"
+    },
+    {
+        "@type": "Relationship",
+        "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:HA_Sensor_Unit:rel_has_Current_Sensor;1",
+        "name": "rel_has_Current_Sensor",
+        "displayName": "Has Current Sensor",
+        "target": "dtmi:com:microsoft:iot:e2e:SmartHouse:Current_Sensor;1"
+    },
+    {
+        "@type": "Relationship",
+        "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:HA_Sensor_Unit:rel_has_Voltage_Sensor;1",
+        "name": "rel_has_Voltage_Sensor",
+        "displayName": "Has Voltage Sensor",
+        "target": "dtmi:com:microsoft:iot:e2e:SmartHouse:Voltage_Sensor;1"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+    "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:Floor;1",
+    "@type": "Interface",
+    "displayName": "Floor - Interface Model",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "FlorName",
+            "schema": "string",
+            "writable": true
+        },
+        {
+            "@type": ["Property", "Area"],
+            "name": "FloorArea",
+            "schema": "integer",
+            "writable": true,
+            "unit": "squareMetre"
+        },
+        {
+            "@type": ["Property", "Level"],
+            "name": "FloorLevel",
+            "schema": "integer",
+            "writable": false
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:Floor:rel_has_room;1",
+            "name": "rel_has_room",
+            "displayName": "Has Room",
+            "target": "dtmi:com:microsoft:iot:e2e:SmartHouse:Room;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:Floor:rel_has_HA_Sensor_Unit;1",
+            "name": "rel_has_HA_Sensor_Unit",
+            "displayName": "Has HA sensor",
+            "target": "dtmi:com:microsoft:iot:e2e:SmartHouse:HA_Sensor_Unit;1"
+        }
+
+    ]
+}

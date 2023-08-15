@@ -1,0 +1,15 @@
+{
+    "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:Current_Sensor;1",
+    "@type": "Interface",
+    "displayName": "Current_Sensor - Interface Model",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+    {
+      "@type": [ "Property", "Current" ],
+      "name": "Current",
+      "schema": "double",
+      "unit": "ampere",
+      "writable": true
+    }
+  ]
+}

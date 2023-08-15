@@ -1,0 +1,28 @@
+{
+    "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:IoTHub_Enviromental_Sensor;1",
+    "@type": "Interface",
+    "displayName": "IoTHub_Enviromental_Sensor - Interface Model",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+    {
+      "@type": [ "Property", "Temperature" ],
+      "name": "Temperature",
+      "schema": "double",
+      "unit": "degreeCelsius",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "RelativeHumidity",
+      "schema": "double",
+      "writable": true
+    },
+    {
+      "@type": [ "Property", "Illuminance" ],
+      "name": "Illuminance",
+      "schema": "double",
+      "unit": "lux",
+      "writable": true
+    }
+  ]
+}

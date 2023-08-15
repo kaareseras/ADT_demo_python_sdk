@@ -1,0 +1,15 @@
+{
+    "@id": "dtmi:com:microsoft:iot:e2e:SmartHouse:Voltage_Sensor;1",
+    "@type": "Interface",
+    "displayName": "Voltage_Sensor - Interface Model",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+    {
+      "@type": [ "Property", "Voltage" ],
+      "name": "Voltage",
+      "schema": "double",
+      "unit": "volt",
+      "writable": true
+    }
+  ]
+}
