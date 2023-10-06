@@ -148,4 +148,20 @@ def add_relationship(service_client, relationshipId, relationshipName, sourceId,
 
     return True
 
+def get_relationship(service_client, digital_twin_id, relationshipId) :
+    # Get a specific relationship outgoing from a node
+    relationship  = service_client.get_relationship(digital_twin_id, relationshipId)
 
+    return relationship
+
+def list_relationships(service_client, digital_twin_id) :
+    # Get all outgoing relationship for a node
+    relationships  = service_client.list_relationships(digital_twin_id)
+
+    return relationships
+
+def list_incoming_relationships(service_client, digital_twin_id) :
+    # Get all outgoing relationship for a node
+    relationships  = service_client.list_incoming_relationships(digital_twin_id)
+
+    return relationships

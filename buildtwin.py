@@ -160,3 +160,14 @@ relationshipName = "rel_has_HA_Temp_Sensor"
 
 add_sensor(service_client,"sensor.83834d_temperature","Aqara",True, random.randint(17, 24))
 add_relationship(service_client, relationshipId, relationshipName, "Driveway", "sensor.83834d_temperature")
+
+relationship =  get_relationship(service_client,"Driveway","dtmi:com:microsoft:iot:e2e:SmartHouse:Area:rel_has_HA_Temp_Sensor;1_Driveway_sensor.83834d_temperature;1")
+print (relationship)
+
+relationships = list_relationships(service_client,"Driveway")
+for relationship in relationships:
+    print (relationship)
+
+relationships = list_incoming_relationships(service_client,"Driveway")
+for relationship in relationships:
+    print (relationship)
